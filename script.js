@@ -13,7 +13,6 @@ request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     const p = document.createElement('p');
-    movie.description = movie.description.substring(0, 300);
     p.textContent = `You should like '${data}'`;
     container.appendChild(p);
   } else {
