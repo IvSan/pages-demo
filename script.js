@@ -16,7 +16,7 @@ request.onload = function () {
       const p = document.createElement('p');
       movie.description = movie.description.substring(0, 300);
       p.textContent = `You should like '${genre}'`;
-      card.appendChild(p);
+      container.appendChild(p);
     });
   } else {
     const errorMessage = document.createElement('marquee');
