@@ -12,12 +12,10 @@ request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
-    data.forEach(genre => {
-      const p = document.createElement('p');
-      movie.description = movie.description.substring(0, 300);
-      p.textContent = `You should like '${genre}'`;
-      container.appendChild(p);
-    });
+    const p = document.createElement('p');
+    movie.description = movie.description.substring(0, 300);
+    p.textContent = `You should like '${data}'`;
+    container.appendChild(p);
   } else {
     const errorMessage = document.createElement('marquee');
     errorMessage.textContent = `Gah, it's not working!`;
